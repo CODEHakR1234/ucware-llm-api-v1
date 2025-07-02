@@ -14,4 +14,5 @@ pip install -r requirements.txt
 export OPENAI_API_KEY="sk-..."
 uvicorn app.main:app --reload
 
+final version of local llm-fastapi-mvc
 >>>>>>> 5b19732 (complete README)
