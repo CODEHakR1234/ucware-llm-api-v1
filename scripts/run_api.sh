@@ -14,3 +14,12 @@ fi
 echo "[🚀] FastAPI 서버 실행 중... (포트 8000)"
 nohup uvicorn app.main:app --reload --host 0.0.0.0 --port 8000 > fastapi.log 2>&1 &
 #uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+
+sleep 2
+
+if lsof -i :8000 | grep LISTEN; then
+  echo "✅ FastAPI 서버가 정상적으로 포트 8000에서 기동되었습니다."
+else
+  echo "❌ FastAPI 서버가 포트 8000에서 실행되지 않았습니다."
+  exit 1
+fi
