@@ -27,14 +27,19 @@ chmod +x scripts/*.sh
 chmod +x run_all.sh
 chmod +x setup_env.sh
 chmod +x run_vllm.sh
+```
 
-=>(vllm 모델 서버 작동) 
+>(vllm 모델 서버 작동) 
+```bash
 ./run_vllm.sh
-
-=>실행 환경 설정
+```
+>실행 환경 설정
+```bash
 ./setup_env.sh
+```
 
-=> 빠른 시작
+> 빠른 시작
+```bash
 ./run_all.sh
 ```
 ## ✅ 1. KT Cloud vLLM 서버 구동
