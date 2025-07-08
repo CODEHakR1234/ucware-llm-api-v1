@@ -21,6 +21,5 @@ async def summarize_pdf(
         raise HTTPException(400, "PDF 텍스트 추출 실패")
     vdb.store(text, req.file_id)
     summary = SummaryService(vdb, cache).generate(req.file_id)
-    cache.clear() # 테스트용으로 잠시 넣어둔 캐시 제거, 나중에 삭제 !!!!
     return {"file_id": req.file_id, "summary": summary, "cached": False}
 
